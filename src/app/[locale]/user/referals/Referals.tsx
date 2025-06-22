@@ -6,8 +6,8 @@ import { IReferalParameters } from "@/services/mongodb/models/ReferalParametersM
 import { useLocale, useTranslations } from "next-intl";
 // import { BsFillInfoCircleFill } from "react-icons/bs";
 import Copy from "./Copy";
-import ReferalWithdrawForm from "./ReferalWithdrawForm";
-import Button from "@/components/forms/Button";
+// import ReferalWithdrawForm from "./ReferalWithdrawForm";
+// import Button from "@/components/forms/Button";
 import { useState } from "react";
 
 interface Props {
@@ -22,7 +22,7 @@ interface Props {
 const Referals = ({ balance, referals, baseUrl, driverId, ibanP, bankP }: Props) => {
   const t = useTranslations("referals");
   const locale = useLocale();
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
   return (
     <main className="px-4 ">
       <Content className="flex max-w-[480px] flex-col gap-4 border-[1px] border-blue-500 overflow-hidden  rounded-lg">
