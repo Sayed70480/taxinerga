@@ -1,0 +1,12 @@
+{
+  "crons": [
+    {
+      "path": "/api/bog/withdraw/update",
+      "schedule": "0 0 * * *"
+    },
+    {
+      "path": "/api/tbc/withdraw/update",
+      "schedule": "0 0 * * *"
+    }
+  ]
+}

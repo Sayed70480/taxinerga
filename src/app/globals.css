@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ql-container {
+  font-family: inherit !important;
+}
+.ql-editor {
+  background-color: #181818;
+  max-height: 500px !important;
+  overflow-y: auto;
+}
+
+.ql-toolbar.ql-snow .ql-formats {
+  color: white !important;
+}
+.ql-toolbar.ql-snow {
+  background-color: white !important;
+}
+
+.ql-editor h1 {
+  font-size: 2rem; /* 32px */
+  font-weight: bold;
+}
+
+.ql-editor h2 {
+  font-size: 1.5rem; /* 24px */
+  font-weight: bold;
+}
+
+.ql-editor h3 {
+  font-size: 1.25rem; /* 20px */
+  font-weight: bold;
+}
+
+.ql-editor p {
+  font-size: 1rem; /* 16px */
+  line-height: 1.5;
+}
+
+.ql-editor blockquote {
+  font-size: 1.25rem; /* 20px */
+  font-style: italic;
+  border-left: 4px solid #ccc;
+  padding-left: 1rem;
+}
+
+.ql-editor ul,
+.ql-editor ol {
+  padding-left: 1.5rem;
+}
+
+.ql-editor ul li {
+  list-style-type: disc;
+}
+
+.ql-editor ol li {
+  list-style-type: decimal;
+}
+
+.ql-editor strong {
+  font-weight: bold;
+}
+
+.ql-editor em {
+  font-style: italic;
+}
+
+.ql-editor u {
+  text-decoration: underline;
+}
+
+.ql-editor a {
+  text-decoration: underline;
+  color: darkorange;
+}
+
+.ql-editor img {
+  width: auto !important;
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+.react-datepicker-wrapper {
+  width: 100% !important;
+}
+
+.upp {
+  font-feature-settings: "case" on;
+}
+
+@media (min-width: 1080px) {
+  *::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #f5f5f5;
+  }
+
+  *::-webkit-scrollbar {
+    width: 12px;
+    background-color: #f5f5f5;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #555;
+  }
+}
