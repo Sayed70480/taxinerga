@@ -17,7 +17,7 @@ const SingInPage = () => {
       </div>
       <Link href={Routes.registration.path}>
         <p className="mt-2 text-sm">
-          {t("notSignUp")} <span className="cursor-pointer text-yellow">{t("signUp")}</span>
+          {t("notSignUp")} <span className="cursor-pointer text-blue-500">{t("signUp")}</span>
         </p>
       </Link>
       <div className="mt-4 w-full max-w-[400px] rounded-lg border border-blue-400 bg-blue-400 bg-opacity-30 p-4 text-sm text-black">
