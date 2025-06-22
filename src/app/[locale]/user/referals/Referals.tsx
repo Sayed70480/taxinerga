@@ -8,7 +8,7 @@ import { useLocale, useTranslations } from "next-intl";
 import Copy from "./Copy";
 // import ReferalWithdrawForm from "./ReferalWithdrawForm";
 // import Button from "@/components/forms/Button";
-import { useState } from "react";
+// import { useState } from "react";
 
 interface Props {
   balance: number;
@@ -19,9 +19,7 @@ interface Props {
   bankP: "tbc" | "bog";
   ibanP: string;
 }
-
-// balance,ibanP, bankP   // these are use as a prop due to deployment comment this 
-const Referals = ({  referals, baseUrl, driverId,  }: Props) => {
+const Referals = ({ /*balance,*/ referals, baseUrl, driverId, /*ibanP, bankP*/ }: Props) => {
   const t = useTranslations("referals");
   const locale = useLocale();
   // const [open, setOpen] = useState(false);

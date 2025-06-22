@@ -17,11 +17,11 @@ const Content: React.FC<ContentProps> = ({ children, className }) => {
 };
 // userMenu is not directly used in the rendering of this component's links,
 // but it's fine to keep it if it's used elsewhere.
-const userMenu = Object.values(Routes.user.subPages || []);
+// const userMenu = Object.values(Routes.user.subPages || []);
 
 export default function BalanceHomePage() {
-  const [balance, setBalance] = useState(800);
-  const [refundableBalance, setRefundableBalance] = useState(12);
+  const [balance, /*setBalance*/] = useState(800);
+  const [refundableBalance, /*setRefundableBalance*/] = useState(12);
   const [minimumGuarantee] = useState(1000);
 
   // Get the locale from the URL parameters
