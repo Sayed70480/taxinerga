@@ -25,11 +25,11 @@ const Input = forwardRef<HTMLInputElement, InputProps>(({ label, error, prefix, 
   };
 
   return (
-    <label className="relative h-[102px] block text-sm text-white">
+    <label className="relative h-[102px] block text-sm text-black">
       {label}
       <div className="relative">
         {prefix && <p className="absolute left-3 top-1/2 -translate-y-1/2 transform text-base">{prefix}</p>}
-        <input ref={ref} className={`bg-darkGray placeholder:text-placeholder mt-2 block w-full rounded-lg px-4 py-3 text-base focus:outline-none ${prefix ? "pl-14" : ""}`} {...props} onChange={handleChange} />
+        <input ref={ref} className={`bg-white placeholder:text-black mt-2 block w-full rounded-lg px-4 py-3 text-base focus:outline-none ${prefix ? "pl-14" : ""}`} {...props} onChange={handleChange} />
       </div>
       {error && <p className="text-sm text-red-600">{error}</p>}
     </label>
