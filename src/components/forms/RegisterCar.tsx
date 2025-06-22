@@ -114,7 +114,7 @@ const RegisterCar = ({ years, driverId }: Props) => {
   };
 
   return (
-    <div className="mx-auto w-full max-w-[400px] rounded-lg bg-gray p-6 pt-4">
+    <div className="mx-auto w-full max-w-[400px] rounded-lg bg-slate-300 p-6 pt-4">
       {step === 1 && (
         <form onSubmit={handleVehicleSpecificationSubmit(handleStep1)}>
           <FormTitle className="mb-4">{t("registration")}</FormTitle>
