@@ -6,7 +6,7 @@ interface Props {
 }
 
 const FormTitle = ({ children, className }: Props) => {
-  return <h4 className={`text-center text-lg font-medium text-white ${className}`}>{children}</h4>;
+  return <h4 className={`text-center text-lg font-medium text-black ${className}`}>{children}</h4>;
 };
 
 export default FormTitle;

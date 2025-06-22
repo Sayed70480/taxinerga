@@ -3,11 +3,18 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import Routes from "@/config/Routes"; // Your Routes config
 import { useParams } from 'next/navigation'; // Import useParams
+interface ContentProps {
+  children: any; // Type 'any' as requested
+  className?: string; // Optional string for CSS classes
+}
 
-const Content = ({ children, className }) => (
-  <div className={className}>{children}</div>
-);
-
+const Content: React.FC<ContentProps> = ({ children, className }) => {
+  return (
+    <div className={className}>
+      {children}
+    </div>
+  );
+};
 // userMenu is not directly used in the rendering of this component's links,
 // but it's fine to keep it if it's used elsewhere.
 const userMenu = Object.values(Routes.user.subPages || []);
