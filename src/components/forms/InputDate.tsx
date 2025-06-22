@@ -33,9 +33,9 @@ const InputDate = forwardRef<HTMLInputElement, InputDateProps>(({ label, error, 
   };
 
   return (
-    <label className="relative block h-[102px] text-sm text-white">
+    <label className="relative block h-[102px] text-sm text-black">
       {label}
-      <input ref={ref} className="mt-2 block w-full rounded-lg bg-darkGray px-4 py-3 text-base placeholder:text-placeholder focus:outline-none" maxLength={10} {...props} onChange={handleChange} />
+      <input ref={ref} className="mt-2 block w-full rounded-lg bg-white px-4 py-3 text-base placeholder:text-black focus:outline-none" maxLength={10} {...props} onChange={handleChange} />
       {error && <p className="text-sm text-red-600">{error}</p>}
     </label>
   );
