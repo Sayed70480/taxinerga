@@ -1,26 +1,37 @@
 "use client"
 import React, { useState } from 'react';
 
-const Content = ({ children, className }) => (
-  <div className={className}>{children}</div>
-);
+// Content component definition (as previously provided, with children: any)
+interface ContentProps {
+  children: any; // Type 'any' as requested
+  className?: string; // Optional string for CSS classes
+}
+
+const Content: React.FC<ContentProps> = ({ children, className }) => {
+  return (
+    <div className={className}>
+      {children}
+    </div>
+  );
+};
 
 export default function GiftsPage() {
-  const [openedBoxes, setOpenedBoxes] = useState(new Set());
-  const [prizes, setPrizes] = useState({});
+  const [openedBoxes, setOpenedBoxes] = useState(new Set<number>()); // Specific type for Set elements for better clarity
+  const [prizes, setPrizes] = useState<Record<number, string>>({}); // Specific type for prizes for better clarity
 
-  const prizeOptions = [
+  const prizeOptions: string[] = [
     "🎉 $10 Bonus!",
     "💎 Premium Features",
     "🎁 Free Month",
     "⭐ 50 Points",
     "🏆 VIP Status",
-    "💰 $25 Credit",
+    "� $25 Credit",
     "🎊 Special Badge",
     "🌟 Double XP"
   ];
 
-  const handleBoxClick = (boxIndex) => {
+  // Type 'any' for boxIndex as requested for function props
+  const handleBoxClick = (boxIndex: any): any => {
     if (!openedBoxes.has(boxIndex)) {
       const randomPrize = prizeOptions[Math.floor(Math.random() * prizeOptions.length)];
       setOpenedBoxes(new Set([...openedBoxes, boxIndex]));
@@ -28,12 +39,21 @@ export default function GiftsPage() {
     }
   };
 
-  const GiftBox = ({ index, isOpened, prize }) => (
+  // Define interface for GiftBox props with 'any' types as requested
+  interface GiftBoxProps {
+    index: any;      // Type 'any'
+    isOpened: any;   // Type 'any'
+    prize: any;      // Type 'any'
+  }
+
+  // GiftBox component, defined as a nested component for clarity.
+  // Its props are typed as 'any' as requested.
+  const GiftBox: React.FC<GiftBoxProps> = ({ index, isOpened, prize }) => (
     <div
       onClick={() => handleBoxClick(index)}
       className={`aspect-square rounded-3xl flex items-center justify-center cursor-pointer transition-all duration-300 ${
-        isOpened 
-          ? 'bg-green-100 border-2 border-green-300' 
+        isOpened
+          ? 'bg-green-100 border-2 border-green-300'
           : 'bg-blue-100 hover:bg-blue-200 hover:scale-105'
       }`}
     >
@@ -69,7 +89,7 @@ export default function GiftsPage() {
   return (
     <main className="px-4 min-h-screen bg-gray-50">
       <Content className="flex max-w-[480px] flex-col gap-6 mx-auto py-6">
-        
+
         {/* Header */}
         <div className="flex items-center gap-3">
           <button className="w-8 h-8 flex items-center justify-center hover:bg-gray-200 rounded-full transition-colors">
@@ -114,8 +134,9 @@ export default function GiftsPage() {
             Reset Boxes
           </button>
         )}
-        
+
       </Content>
     </main>
   );
 }
+�
