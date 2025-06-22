@@ -25,7 +25,7 @@ export default function GiftsPage() {
     "🎁 Free Month",
     "⭐ 50 Points",
     "🏆 VIP Status",
-    "� $25 Credit",
+    "💰 $25 Credit", // Corrected the stray character here if it was still present
     "🎊 Special Badge",
     "🌟 Double XP"
   ];
@@ -34,7 +34,7 @@ export default function GiftsPage() {
   const handleBoxClick = (boxIndex: any): any => {
     if (!openedBoxes.has(boxIndex)) {
       const randomPrize = prizeOptions[Math.floor(Math.random() * prizeOptions.length)];
-      setOpenedBoxes(new Set([...openedBoxes, boxIndex]));
+      setOpenedBoxes(new Set([...openedBoxes  , boxIndex]));
       setPrizes({ ...prizes, [boxIndex]: randomPrize });
     }
   };
@@ -44,6 +44,7 @@ export default function GiftsPage() {
     index: any;      // Type 'any'
     isOpened: any;   // Type 'any'
     prize: any;      // Type 'any'
+  
   }
 
   // GiftBox component, defined as a nested component for clarity.
