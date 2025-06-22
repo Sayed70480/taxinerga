@@ -19,7 +19,9 @@ interface Props {
   bankP: "tbc" | "bog";
   ibanP: string;
 }
-const Referals = ({ balance, referals, baseUrl, driverId, ibanP, bankP }: Props) => {
+
+// balance,ibanP, bankP   // these are use as a prop due to deployment comment this 
+const Referals = ({  referals, baseUrl, driverId,  }: Props) => {
   const t = useTranslations("referals");
   const locale = useLocale();
   // const [open, setOpen] = useState(false);
