@@ -2,9 +2,19 @@
 
 import React, { useState } from 'react';
 
-const Content = ({ children , className }) => (
-  <div className={className}>{children}</div>
-);
+
+interface ContentProps {
+  children: any; // Type 'any' as requested
+  className?: string; // Optional string for CSS classes
+}
+
+const Content: React.FC<ContentProps> = ({ children, className }) => {
+  return (
+    <div className={className}>
+      {children}
+    </div>
+  );
+};
 
 export default function AddFunds() {
   const [copied, setCopied] = useState(false);
