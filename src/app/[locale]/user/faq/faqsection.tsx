@@ -2,9 +2,19 @@
 
 import React, { useState } from 'react';
 
-const Content = ({ children , className }) => (
-  <div className={className}>{children}</div>
-);
+
+interface ContentProps {
+  children: any; // Type 'any' as requested
+  className?: string; // Optional string for CSS classes
+}
+
+const Content: React.FC<ContentProps> = ({ children, className }) => {
+  return (
+    <div className={className}>
+      {children}
+    </div>
+  );
+};
 
 export default function FAQSection() {
   const [expandedItems, setExpandedItems] = useState(new Set());
@@ -27,7 +37,7 @@ export default function FAQSection() {
     }
   ];
 
-  const toggleExpanded = (id) => {
+  const toggleExpanded = (id :any) => {
     const newExpanded = new Set(expandedItems);
     if (newExpanded.has(id)) {
       newExpanded.delete(id);
